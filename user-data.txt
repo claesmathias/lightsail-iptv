@@ -61,7 +61,9 @@ restorecon -FRvv ~/.ssh
 sudo chmod 777 /home/centos/movies/
 sudo chmod 777 /home/centos/tv/
 sudo chmod 777 /home/centos/xteve/
+sudo chmod 777 /home/centos/EPG/
 sudo chown -R centos:centos /home/centos/movies/
 sudo chown -R centos:centos /home/centos/tv/
 sudo chown -R centos:centos /home/centos/xteve/
+sudo chown -R centos:centos /home/centos/EPG/
 
