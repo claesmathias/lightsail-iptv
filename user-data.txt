@@ -48,6 +48,9 @@ sudo chcon -Rt svirt_sandbox_file_t /home/centos
 cd /home/centos/lightsail-iptv/
 /usr/local/bin/docker-compose up -d
 
+# generate random password
+PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo '')
+
 # create basic auth user
 htpasswd -b -c /home/centos/letsencrypt/nginx/.htpasswd admin $PASSWORD
 
