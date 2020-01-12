@@ -94,6 +94,7 @@ services:
     image: crobibero/xteve
     volumes:
       - /home/centos/xteve:/home/xteve/xteve
+      - /home/centos/EPG:/tmp/xteve
     networks:
       - app_net
 
