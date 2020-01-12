@@ -39,7 +39,7 @@ INTERVAL='5m'
 EOF
 
 # set permissions
-sudo chown -R centos:centos /home/centos/lightsail-htpc/
+sudo chown -R centos:centos /home/centos/lightsail-iptv/
 
 # set selinux permissions
 sudo chcon -Rt svirt_sandbox_file_t /home/centos
@@ -55,9 +55,7 @@ htpasswd -b -c /home/centos/letsencrypt/nginx/.htpasswd admin $PASSWORD
 restorecon -FRvv ~/.ssh
 
 # set permissions
-sudo chmod 777 /home/centos/downloads/
 sudo chmod 777 /home/centos/movies/
 sudo chmod 777 /home/centos/tv/
-sudo chown -R centos:centos /home/centos/downloads/
 sudo chown -R centos:centos /home/centos/movies/
 sudo chown -R centos:centos /home/centos/tv/
