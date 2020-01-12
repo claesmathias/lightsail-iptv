@@ -86,6 +86,18 @@ services:
      retries: 20
 
 #
+# xteve
+# M3U Proxy for Plex DVR and Emby Live TV
+#
+  xteve:
+    container_name: xteve
+    image: crobibero/xteve
+    volumes:
+      - /home/centos/xteve:/home/xteve/xteve
+    networks:
+      - app_net
+
+#
 # network
 #
 networks:
